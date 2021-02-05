@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
+    <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
+    <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sherwood-resort.com/" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="shrwd-bg-full">
+    </div>
+    <div ng-app="shrwd" ng-controller="shrwdCtrl">
+        <div id="preloader" class="grid-x shrwd-bg align-center-middle">
+            <div class="cell" id="pre-logo">
+                <img src="assets/img/logo.svg" alt="">
+            </div>
+        </div>
+        <div class="header">
+            <div class="grid-x">
+                <div class="cell auto uppercase">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                        <li>
+                            <a href=""><i class="fas fa-bars fa-2x"></i></a>
+                            <ul class="menu">
+                                <li ng-repeat="item in data.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cell shrink">
+                    <div class="white-bg main-logo ">
+                        <a href=" ">
+                            <img src="assets/img/logo.svg" alt="на головну"></a>
+                    </div>
+                </div>
+                <div class="cell auto text-right social-icons">
+                    <span class="show-for-medium">
+                        <a href="https://www.facebook.com/{[{data.fb}]}" target="_blank">
+                            <i class="fab fa-facebook-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com/{[{data.insta}]}" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i></a>
+                    </span>
+                    <a href="#google-map">
+                        <i class="fa fa-map-marker fa-2x"></i></a>
+                </div>
+            </div>
+        </div>    <div ng-view></div><br><br><br>
+        <footer>
+            <div class="light-bg" style="border-radius: 0"><br>
+                <div class="grid-x grid-padding-x">
+                    <div class="cell medium-7 large-9">
+                        <div id="google-map" style="width:100%;height:400px; "></div><br>
+                    </div>
+                    <div class="cell medium-5 large-3">
+                        <p class="pre">{[{data.address}]}</p>
+                        рецепція: <a class="tel" href="tel://{[{data.tel}]}">{[{data.telView}]}</a>
+                        <br><span class="gold small">{[{data.disclaim}]}</span>
+                        <p>{[{data.email}]}</p>
+                        <div class="orn-3"></div>
+                        <div class="social-icons ">
+                            <a href="https://www.facebook.com/{[{data.fb}]}" target="_blank">
+                                <i class="fab fa-facebook-square fa-2x"></i></a>
+                            <a href="https://www.instagram.com/{[{data.insta}]}" target="_blank">
+                                <i class="fab fa-instagram fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAfuN7UgfDB2RfqBeNIZ1S_rpZ6HU-GKYU"></script>
+        <script>
+        var myCenter = new google.maps.LatLng(49.784469, 23.454320);
+        var myPin = 'assets/img/map-pin.png';
+        
+        function initialize() {
+            var mapProp = {
+                zoomControl: true,
+                scrollwheel: false,
+                center: myCenter,
+                zoom: 10,
+                disableDefaultUI: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var mapLviv = new google.maps.Map(document.getElementById("google-map"), mapProp);
+            var myMarker = new google.maps.Marker({
+                position: myCenter,
+                icon: myPin,
+                map: mapLviv,
+                title: 'с. Довгомостиська, Зелена 38-Б'
+            });
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+        </script></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
+    <script src="assets/js_plugins/angular-animate.js"></script>
+    <script src="assets/js_plugins/myAngular.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js_plugins/angular-slick.js"></script>
+</body>
+
+</html>

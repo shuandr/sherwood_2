@@ -1,0 +1,107 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
+    <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
+    <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sherwood-resort.com/" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <slick settings="mainSlickConfig">
+        <div ng-repeat="slide in data.mainSlider">
+            <div class="main-slide" style="background-image: url(assets/img/{[{slide.img}]})">
+                <div class="grid-x grid-padding-x align-bottom" style="height: 100%">
+                    <div class="cell text-center main-slide-content" style="z-index: 2">
+                        <a href="{[{slide.href}]}">
+                            <h1 class="uppercase white text-center">{[{slide.text}]}</h1><br>
+                        </a>
+                        <a href="{[{slide.bHref}]}">
+                            <button class="large button uppercase white-bg dark">{[{slide.button}]}</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slick>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center main-bg rounded">
+            <div class="cell medium-11 large-10 align-self-center text-center">
+                <br>
+                <!-- INTRO -->
+                <h2 class="uppercase light-gold  ">{[{data.intro.h}]}</h2>
+                <p class="pre">{[{data.intro.p}]}</p>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.intro.img" src="assets/img/{[{slide}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                <!-- END -->
+                <!-- HOTEL -->
+                <h2 class="uppercase light-gold  ">{[{data.hotel.h}]}</h2>
+                <p class="pre text-left">{[{data.hotel.p}]}</p>
+                <ul class="text-left">
+                    <li ng-repeat="room in data.hotel.list">{[{room}]}</li>
+                </ul>
+                <p class="pre">{[{data.hotel.p2}]}</p>
+                <a href="#!/hotel" class="hollow button uppercase">детальніше</a>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.hotel.img" src="assets/img/{[{slide}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                <!-- END -->
+                <!-- RESTO -->
+                <h2 class="uppercase light-gold  ">{[{data.resto.h}]}</h2>
+                <p class="pre">{[{data.resto.p}]}</p>
+                <a href="#!/menu" class="hollow button uppercase">меню</a>&nbsp;&nbsp;&nbsp;
+                <a href="#!/alco-menu" class="hollow button uppercase">винна мапа</a>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="food in data.resto.img" src="assets/img/{[{food}]}" alt="">
+                </slick>
+                <div class="orn"></div><br>
+                <!-- END -->
+            </div>
+        </div>
+    </div><br><br><br>
+    <!-- ACTIVITIES -->
+    <div class="alt-bg"><br>
+        <div class="orn-2"></div>
+        <div class="grid-x align-center  small-up-1 medium-up-2 large-up-3">
+            <div ng-repeat="act in data.activities" class="cell activity">
+                <img src="assets/img/{[{act.img}]}" alt="{[{act.h}]}">
+                <div class="act-overlay"></div>
+                <h3 class="uppercase light-gold ">{[{act.h}]}</h3>
+                <div class="act-text text-center">{[{act.p}]}</div>
+            </div>
+        </div>
+        <div class="orn-2"></div><br>
+    </div>
+    <div class="main-slogan parallax">
+        <div class="grid-x align-center-middle violet-overlay">
+            <div class="cell text-center">
+                <h1 class="light-gold uppercase">{[{data.slogan}]}</h1>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
+    <script src="assets/js_plugins/angular-animate.js"></script>
+    <script src="assets/js_plugins/myAngular.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js_plugins/angular-slick.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
+    <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
+    <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sherwood-resort.com/" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <slick settings="mainSlickConfig">
+        <div ng-repeat="slide in data.menuSlider">
+            <div class="menu-slide" style="background-image: url(assets/img/{[{slide}]})">
+            </div>
+        </div>
+    </slick>
+    <div class="grid-container">
+        <div class="main-bg rounded">
+            <div class="grid-x grid-padding-x align-center">
+                <div class="cell medium-11 large-10 align-self-center"><br>
+                    <h1 class="uppercase gold text-center">бар і винна мапа</h1><br>
+                    <table>
+                        <tr>
+                            <td class="dish-name text-center">назва</td>
+                            <td class="dish-mass text-right">об’єм</td>
+                            <td class="dish-price text-right">пляшка</td>
+                            <td class="dish-price text-right">порція</td>
+                        </tr>
+                    </table>
+                    <div ng-repeat="section in sherAlcoMenu">
+                        <h3 class="menu-section text-center uppercase">{[{section.section}]}</h3>
+                        <table>
+                            <tr ng-repeat="dish in section.dishes">
+                                <td class="dish-name">{[{dish.name}]}
+                                    <br>
+                                    <p class="dish-descr">{[{dish.descr}]}</p>
+                                </td>
+                                <td class="dish-mass text-right">{[{dish.volume}]}</td>
+                                <td class="dish-price text-right">{[{dish.bottle_price}]}</td>
+                                <td class="dish-price text-right">{[{dish.price}]}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="text-center"><a href="#!/menu" class="hollow button uppercase">основне меню</a>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <div class="text-center">
+            <a href="tel://{[{data.tel}]}" class="large button uppercase"><i class="fas fa-phone "></i> замовити столик</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
+    <script src="assets/js_plugins/angular-animate.js"></script>
+    <script src="assets/js_plugins/myAngular.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js_plugins/angular-slick.js"></script>
+</body>
+
+</html>

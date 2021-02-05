@@ -1,0 +1,69 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
+    <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
+    <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://sherwood-resort.com/" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://kit.fontawesome.com/0caeff61d9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <slick settings="mainSlickConfig">
+        <div ng-repeat="slide in data.hotel.topSlider">
+            <div class="menu-slide" style="background-image: url(assets/img/{[{slide}]})">
+            </div>
+        </div>
+    </slick>
+    <div class="grid-container">
+        <div class="main-bg rounded" style="padding: 1rem"><br>
+            <h1 class="uppercase gold text-center">{[{data.hotel.h}]}</h1>
+            <h5 class=" pre dark-gold text-center">{[{data.hotel.roomTypesIntro}]}</h5>
+            <div class="text-center">   
+            <a href="#!/breakfast" class="hollow button uppercase">сніданки</a>
+            </div>       
+            <div class="orn"></div>
+            <div ng-repeat="room in data.hotel.roomTypes">
+                <div class="grid-x grid-padding-x align-middle">
+                    <div class="cell large-5 {[{room.cellOrder2}]}">
+                        <h4 class="uppercase light-gold  text-center">{[{room.h}]}</h4>
+                        <p class="pre text-left">{[{room.p}]}</p>
+                        <ul class="text-left">
+                            <li ng-repeat="x in room.list">{[{x}]}</li>
+                        </ul>
+                        <p class="price text-right">{[{room.price}]}</p>
+                    </div>
+                    <div class="cell large-7 {[{room.cellOrder}]}">
+                        <slick settings="smallSlickConfig">
+                            <img ng-repeat="slide in room.img" src="assets/img/{[{slide}]}" alt="">
+                        </slick>
+                    </div>
+                </div>
+                <div class="orn"></div>
+            </div>
+        </div><br>
+        <div class="text-center">
+            <a href="#!/booking" class="large button uppercase"><i class="fas fa-phone "></i> забронювати</a>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
+    <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
+    <script src="assets/js_plugins/angular-animate.js"></script>
+    <script src="assets/js_plugins/myAngular.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js_plugins/angular-slick.js"></script>
+</body>
+
+</html>
