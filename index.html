@@ -29,14 +29,26 @@
         <div class="header">
             <div class="grid-x">
                 <div class="cell auto uppercase">
-                    <ul class="dropdown menu" data-dropdown-menu>
-                        <li>
-                            <a href=""><i class="fas fa-bars fa-2x"></i></a>
-                            <ul class="menu">
-                                <li ng-repeat="item in data.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="nav-menu-wrapper">
+                        <ul class="dropdown menu" data-dropdown-menu>
+                            <li>
+                                <a href=""><i class="fas fa-bars fa-2x"></i></a>
+                                <ul class="menu nav-menu">
+                                    <li ng-repeat="item in data.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lang-select text-center">
+                        <ul class="dropdown menu rounded" data-dropdown-menu>
+                            <li class="">
+                                <a href="">{[{selectedLang}]}</a>
+                                <ul class="menu">
+                                    <li ng-repeat="lang in langs"><a href="" ng-click="changeLang(lang)">{[{lang}]}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="cell shrink">
                     <div class="white-bg main-logo ">
@@ -44,15 +56,17 @@
                             <img src="assets/img/logo.svg" alt="на головну"></a>
                     </div>
                 </div>
-                <div class="cell auto text-right social-icons">
-                    <span class="show-for-medium">
-                        <a href="https://www.facebook.com/{[{data.fb}]}" target="_blank">
-                            <i class="fab fa-facebook-square fa-2x"></i></a>
-                        <a href="https://www.instagram.com/{[{data.insta}]}" target="_blank">
-                            <i class="fab fa-instagram fa-2x"></i></a>
-                    </span>
-                    <a href="#google-map">
-                        <i class="fa fa-map-marker fa-2x"></i></a>
+                <div class="cell auto text-right ">
+                    <div class="social-icons">
+                        <span class="show-for-medium">
+                            <a href="https://www.facebook.com/{[{data.fb}]}" target="_blank">
+                                <i class="fab fa-facebook-square fa-2x"></i></a>
+                            <a href="https://www.instagram.com/{[{data.insta}]}" target="_blank">
+                                <i class="fab fa-instagram fa-2x"></i></a>
+                        </span>
+                        <a href="#google-map">
+                            <i class="fa fa-map-marker fa-2x"></i></a>
+                    </div>
                 </div>
             </div>
         </div>    <div ng-view></div><br><br><br>
@@ -112,6 +126,7 @@
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js_plugins/angular-slick.js"></script>
+    
 </body>
 
 </html>

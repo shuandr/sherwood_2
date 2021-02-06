@@ -36,13 +36,50 @@ app.config(['$compileProvider', "$routeProvider", "$interpolateProvider",
     }
 ]);
 
-app.controller('shrwdCtrl', function($scope, $http) {
+app.controller('shrwdCtrl', function($scope, $http, $timeout) {
 
+    $scope.langs = ["UA", "EN"];
+    $scope.selectedLang = "UA";
+    $scope.data = {};
+    $scope.dataLoaded = true;
 
+    $scope.changeLang = function(lang) {
+        if (lang == "UA") {
+            $scope.data = $scope.dataUA;
+            $scope.selectedLang = "UA";
+            $scope.book = $scope.dataUA.booking;
+
+            $scope.dataLoaded = false;
+            $timeout(function() {
+                $scope.dataLoaded = true;
+            }, 20);
+
+        } else {
+            $scope.data = $scope.dataEN;
+            $scope.selectedLang = "EN";
+                        $scope.book = $scope.dataEN.booking;
+
+            $scope.dataLoaded = false;
+            $timeout(function() {
+                $scope.dataLoaded = true;
+            }, 20);
+            // console.log(lang);
+        }
+    };
 
     $http.get("assets/data/data.json").then(function(response) {
-        $scope.data = response.data;
-        $scope.book = $scope.data.booking;
+        $scope.dataUA = response.data;
+        $scope.book = $scope.dataUA.booking;
+        if ($scope.selectedLang == "UA") {
+            $scope.data = $scope.dataUA;
+        }
+    });
+
+    $http.get("assets/data/data_EN.json").then(function(response) {
+        $scope.dataEN = response.data;
+        if ($scope.selectedLang == "EN") {
+            $scope.data = $scope.dataEN;
+        }
     });
 
     $http.get("assets/data/menu.json").then(function(response) {
@@ -66,6 +103,9 @@ app.controller('shrwdCtrl', function($scope, $http) {
     });
 
 
+
+
+
     $scope.smallSlickConfig = {
         arrows: false,
         autoplay: true,
@@ -83,7 +123,64 @@ app.controller('shrwdCtrl', function($scope, $http) {
         fade: true,
     };
 
+ // FORM-SUBMISSION-HANDLER
 
+    // get all data in form and return object
+    function getFormData() {
+        var elements = document.getElementById("gform").elements; // all form elements
+        var fields = Object.keys(elements).map(function(k) {
+            if (elements[k].name !== undefined) {
+                return elements[k].name;
+                // special case for Edge's html collection
+            } else if (elements[k].length > 0) {
+                return elements[k].item(0).name;
+            }
+        }).filter(function(item, pos, self) {
+            return self.indexOf(item) == pos && item;
+        });
+        var data = {};
+        fields.forEach(function(k) {
+            data[k] = elements[k].value;
+            if (elements[k].type === "checkbox") {
+                data[k] = elements[k].checked;
+                // special case for Edge's html collection
+            } else if (elements[k].length) {
+                for (var i = 0; i < elements[k].length; i++) {
+                    if (elements[k].item(i).checked) {
+                        data[k] = elements[k].item(i).value;
+                    }
+                }
+            }
+        });
+        console.log(data);
+        return data;
+    }
+
+    $scope.formSubmit = function() { // handles form submit withtout any jquery
+        // event.preventDefault(); // we are submitting via xhr below
+        var data = getFormData(); // get the values submitted in the form
+
+        // var url = event.target.action; //
+        var url = "https://script.google.com/macros/s/AKfycbxCReput38Lmh2tpLKCaM2c-YZUbjwkHDJypof6hO-lsuLRS14/exec"; //
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', url);
+        // xhr.withCredentials = true;
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            console.log(xhr.status, xhr.statusText)
+            console.log(xhr.responseText);
+            // document.getElementById('gform').style.display = 'none'; // hide form
+            document.getElementById('thankyou_message').style.display = 'block';
+            return;
+        };
+        // url encode form data for sending as post data
+        var encoded = Object.keys(data).map(function(k) {
+            return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+        }).join('&')
+        xhr.send(encoded);
+        // }
+    }
+    // END of FORM-SUBMISSION-HANDLER
 });
 
 app.directive('angularMask', function() {

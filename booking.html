@@ -23,7 +23,7 @@
         <div class="grid-x grid-padding-x align-middle" style="min-height: 100vh">
             <div class="cell main-bg rounded"><br>
                 <h3 class="uppercase gold text-center">{[{book.title}]}</h3><br>
-                <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxCReput38Lmh2tpLKCaM2c-YZUbjwkHDJypof6hO-lsuLRS14/exec">
+                <form ng-submit="formSubmit()" id="gform" >
                     <div class="grid-x grid-padding-x">
                         <div class="large-4 medium-6 cell">
                             <input type="text" id="name" name="ім’я" placeholder="{[{book.name}]}" required>
@@ -50,13 +50,13 @@
                                 <option ng-repeat="opt in book.roomOpt" value="{[{opt}]}">{[{opt}]}</option>
                             </select>
                             <div class="grid-x grid-padding-x">
-                                <div class="small-6 cell text-right">
+                                <div class="small-6 cell">
                                     <label for="adults">{[{book.adults}]}:</label>
                                     <select id="adults" name="дорослі">
                                         <option ng-repeat="opt in book.quant" value="{[{opt}]}">{[{opt}]}</option>
                                     </select>
                                 </div>
-                                <div class="small-6 cell text-right">
+                                <div class="small-6 cell">
                                     <label for="children">{[{book.children}]}:</label>
                                     <select id="children" name="діти">
                                         <option ng-repeat="opt in book.quant" value="{[{opt}]}">{[{opt}]}</option>
@@ -74,11 +74,12 @@
                 </form>
                 <br><br>
                 <div style="display:none;" id="thankyou_message">
-                    <h5 class="uppercase gold text-center">{[{book.thnxMsg}]}</h5>
-                </div>
+                    <h4 class="uppercase gold text-center">{[{book.thnxMsg}]}</h4>
+                </div><br><br>
             </div>
         </div>
     </div>
+     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
@@ -88,6 +89,7 @@
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js_plugins/angular-slick.js"></script>
+    
 </body>
 
 </html>
