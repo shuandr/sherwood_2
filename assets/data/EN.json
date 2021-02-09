@@ -133,7 +133,7 @@
     },
     "hotel":
     {
-
+        "h": "hotel",
         "intro": "All prices include breakfast\nexcept wood house\nAll prices do not include tourist tax \n(20.87 UAH for Ukrainian citizens, 125.19 UAH — for foreigners, per night per person)",
 
         "introBtn": "breakfasts",
@@ -281,7 +281,7 @@
     },
     "menu":
     {
-         "mainMenu": "main menu",
+        "mainMenu": "main menu",
         "alco": "bar & wine map",
         "brkfs": "breakfasts",
         "bookTbl": "book table"
