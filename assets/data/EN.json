@@ -1,0 +1,289 @@
+{
+    "address": "81342, Ukraine, Lviv Region \n38b Zelena Str., Dovhomostyska Village, \nMostyska District, ",
+    "disclaim": "There's no GSM «Kyivstar» coverage on the teritory",
+    "reception": "reception",
+    "logo": "logo_EN.svg",
+    "mainMenu": [
+    {
+        "h": "home page",
+        "a": "#!/"
+    },
+    {
+        "h": "hotel",
+        "a": "#!/hotel"
+    },
+    {
+        "h": "banquette hall",
+        "a": "#!/hall"
+    },
+    {
+        "h": "conference hall",
+        "a": "#!/hall#conf"
+    },
+    {
+        "h": "restaurant menu",
+        "a": "#!/menu"
+    },
+    {
+        "h": "wine map",
+        "a": "#!/alco-menu"
+    },
+    {
+        "h": "breakfasts",
+        "a": "#!/breakfast"
+    },
+    {
+        "h": "booking",
+        "a": "#!/booking"
+    }],
+    "main":
+    {
+        "topSlider": [
+            {
+                "text": "hotel & resort",
+                "img": "hotel.webp",
+                "href": "#!/hotel",
+                "button": "book",
+                "bHref": "#!/booking"
+            },
+            {
+                "text": "banquette hall",
+                "img": "hall_2.webp",
+                "href": "#!/hall",
+                "button": "book",
+                "bHref": "tel://+380323438097"
+            },
+            {
+                "text": "photosessions",
+                "img": "photo_1.webp",
+                "href": " ",
+                "button": "book",
+                "bHref": "tel://+380323438097"
+            }
+
+        ],
+
+        "intro":
+        {
+            "h": "welcome to Sherwood",
+            "p": " Sherwood hotel and restaurant centre is situated in the midst of forest, framed with velvet odoriferous grass, oaks, silver fir trees and pines. God has given this place virgin beauty and generosity, and careful hands of the hosts made this picture perfect.\nSpacious and well-planned territory, large guarded parking, the lake, enchanting and inimitable nature create very special comfortable air for your pleasant retreat.\nHarmonious combination of nature’s grandeur and advances of civilization, comfortable and cosy rooms and personnel’s warm and caring attitude – this is the concept on which the hospitability of Sherwood hotel and restaurant centre is based.\nSherwood hotel and restaurant centre is located near the international highway Lviv-Shegyni not far (35 km) from Lviv."
+
+        },
+        "hotel":
+        {
+            "h": "hotel",
+            "p": "There are 25 rooms of various categories in the resort, which combines homey comfort, heart warmth and high quality service. All guests are welcome to a restaurant of European and local Ukrainian cuisine, 24/7 lobby bar, billiard and pool tables:",
+            "list": [
+                "3 suite rooms",
+                "2 junior suite rooms",
+                "9 triple rooms",
+                "12 double rooms",
+                "1 single rooms",
+                "4 double rooms in wooden house"
+            ],
+            "p2": " ",
+            "moreBtn": "read more"
+        },
+        "resto":
+        {
+            "h": "Restaurant",
+            "p": " The restaurant is a wonderful piece of fairly splendid neo-Gothic, where guests may relax from the loud and fast city life and enjoy their time in this place of elegancy and high reputation.\nStylish design of the restaurant demonstrates harmonic combination of luxury and simplicity. Dish choice in the menu brings kaleidoscope of satisfaction from tasting delicious food. Fresh ingredients and strict processing technology ensure high quality of the dishes.",
+            "menuBtn": "menu",
+            "alcoBtn": "wine map"
+        },
+        "activities": [
+        {
+            "h": "spa",
+            "p": "Римська та фінська баня, басейн, джакузі, контрасний душ, трав’яні чаї та настої, окрема кімната для відпочинку, кабельне телебачення, безкоштовна стоянка. Вартість — 950 UAH/2 год., лише баня — 680 грн/2 год. До 6 осіб одночасно.",
+            "img": "spa_1.webp"
+
+        },
+        {
+            "h": "billiards",
+            "p": "We invite you to play Russian pyramid or pool. Our billiard rooms provide an attractive mixture of cue games, cosy setting, cheerful retreat, relaxing atmosphere and affordable prices. In our hotel you may participate in billiard tournaments and even win a valuable prize or simply watch professionals playing together with your friends.",
+            "img": "billyard.webp"
+
+        },
+        {
+            "h": "lake",
+            "p": "Rent: beach chair — 70 UAH, towel — 30 UAH per day",
+            "img": "kolyba_coast.webp"
+
+        },
+        {
+            "h": "Gazebo",
+            "p": "There are 8 gazebo (for 10 persons) near the stone beach, with service from «Kolyba» restaurant.\nGazebo rent — 300 UAH, VIP — 600 UAH",
+            "img": "altanky_1.webp"
+
+        },
+        {
+            "h": "fishing",
+            "p": " ",
+            "img": "carpio_1.webp"
+
+        },
+        {
+            "h": "Football",
+            "p": "Free for hotel clients ",
+            "img": "football.webp"
+
+        }],
+        "slogan": "We'll be glad to see you!"
+
+    },
+    "hotel":
+    {
+
+        "intro": "All prices include breakfast\nexcept wood house\nAll prices do not include tourist tax \n(20.87 UAH for Ukrainian citizens, 125.19 UAH — for foreigners, per night per person)",
+
+        "introBtn": "breakfasts",
+
+        "roomTypes": [
+        {
+            "h": "suite",
+            "p": "Each of the 2 comfortable 2-room suites consist of the living room (28 m2) and bedroom (16 m2) with a king-size bed.\nThe suite also has:",
+            "list": [
+                "Desk",
+                "Large plasma TV with cable channels",
+                "Free broadband Internet",
+                "Individual safe",
+                "Mini bar",
+                "Bathroom with a bathtub and body-care products",
+                "Bathrobe and towels"
+            ],
+            "price": "Price: 1500 UAH",
+            "img": [
+                "lux_5.webp",
+                "lux_4.webp",
+                "lux_3.webp",
+                "lux_2.webp",
+                "lux_6.webp"
+            ]
+        },
+        {
+            "cellOrder": "large-order-1",
+            "cellOrder2": "large-order-2",
+            "h": "junior suite",
+            "p": "Comfortable rooms (40 m2) with king-size beds.\nThe junior suite also has:",
+            "list": [
+                "Desk",
+                "Large plasma TV with cable channels",
+                "Free broadband Internet",
+                "Bathroom with a bathtub and body-care products",
+                "Bathrobe and towels"
+            ],
+            "price": "Price: 1140 UAH",
+            "img": [
+                "semi-lux_2.webp",
+                "semi-lux_3.webp",
+                "semi-lux_4.webp",
+                "semi-lux_5.webp"
+            ]
+        },
+        {
+            "h": "double rooms",
+            "p": "Double room is the best choice for work and rest. In our STANDARD double rooms there either twin beds or a king-size bed, while in the SUPERIOR double rooms a third person may also sleep on an additional bed.\nThe double room also has:",
+            "list": [
+                "Desk",
+                "Large plasma TV with cable channels",
+                "Free broadband Internet",
+                "Bathrobe and towels"
+
+            ],
+            "price": "Price: 990 UAH",
+            "img": [
+                "standart-room-2-1.webp",
+                "standart-room-2-2.webp",
+                "standart-room-2-3.webp",
+                "standart-room-2-4.webp",
+                "standart-room-2-5.webp"
+            ]
+        },
+        {
+            "cellOrder": "large-order-1",
+            "cellOrder2": "large-order-2",
+            "h": "single rooms",
+            "p": "Light and comfortable one-room accommodation (14 m2) with a single bed.\nThe single room also has:",
+            "list": [
+                "Desk",
+                "Free broadband Internet",
+                "Bathroom with a bathtub and body-care products",
+                "Bathrobe and towels"
+            ],
+            "price": "Price: 540 UAH",
+            "img": [
+                "standart-room-1-1.webp",
+                "standart-room-1-2.webp"
+            ]
+        },
+        {
+            "h": "wooden house",
+            "p": " Evergreen forest, gorgeous picturesque views — all that enchanting beauty you will see through the window of your bedroom. The guests are immersed into serenity of the surrounding nature. This is the best place for people who would like to get away from the fuss of daily routine.\nIn each room:",
+            "list": [
+                "24-hour room-service",
+                "Desk",
+                "Large plasma TV with cable channels",
+                "Bathroom with a bathtub and body-care products",
+                "Bathrobe and towels"
+            ],
+            "price": "Price: 600 UAH",
+            "img": [
+                "wooden_house-1.webp",
+                "wooden_house-2.webp",
+                "wooden_house-3.webp"
+            ]
+        }],
+        "bookBtn": "book"
+    },
+
+    "hall":
+    {
+        "intro":
+        {
+            "h": "banquettes & conferences",
+            "p": "we offer you something exclusive"
+        },
+
+        "banquette":
+        {
+            "h": "banquette hall",
+            "p": "we offer you something very very exclusive"
+
+        },
+        "conf":
+        {
+            "h": "conference hall",
+            "p": " Various business events can take place in our conference room that can seat up to 30 persons.\nConference room of Sherwood hotel is a perfect place for such events as press conferences, presentations, round tables and business training workshops. Special conference furniture has several layout variants to fit best your audience’s needs.\nPrice: 300 UAH/hour, 2000 UAH/day"
+
+        },
+        "btn": "book",
+        "bHref": "tel://+380323438097"
+
+    },
+
+    "booking":
+    {
+        "title": "booking request",
+        "name": "your name *",
+        "tel": "phone number",
+        "errEmail": "invalid e-mail",
+        "required": "* required",
+        "arrive": "arrival *",
+        "depart": "departure",
+        "room": "choose room type",
+        "roomOpt": ["suite", "semi-suite", "triple", "double", "single"],
+        "adults": "adults",
+        "children": "children",
+        "comment": "your suggestions:",
+        "submit": "send",
+        "thnxMsg": "Thank you!",
+        "quant": ["1", "2", "3", "4", "5"]
+    },
+    "menu":
+    {
+         "mainMenu": "main menu",
+        "alco": "bar & wine map",
+        "brkfs": "breakfasts",
+        "bookTbl": "book table"
+    }
+}

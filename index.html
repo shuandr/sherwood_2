@@ -18,15 +18,15 @@
 </head>
 
 <body>
-    <div class="shrwd-bg-full">
-    </div>
+    
     <div ng-app="shrwd" ng-controller="shrwdCtrl">
+        <div class="shrwd-bg-full"></div>
         <div id="preloader" class="grid-x shrwd-bg align-center-middle">
-            <div class="cell" id="pre-logo">
-                <img src="assets/img/logo.svg" alt="">
-            </div>
+        <div class="cell" id="pre-logo">
+            <img src="assets/img/logo.svg" alt="">
         </div>
-        <div class="header">
+    </div>
+        <header >
             <div class="grid-x">
                 <div class="cell auto uppercase">
                     <div class="nav-menu-wrapper">
@@ -34,13 +34,14 @@
                             <li>
                                 <a href=""><i class="fas fa-bars fa-2x"></i></a>
                                 <ul class="menu nav-menu">
-                                    <li ng-repeat="item in data.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
+                                    <li ng-repeat="item in lngData.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
+                                    <li>&nbsp;</li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                     <div class="lang-select text-center">
-                        <ul class="dropdown menu rounded" data-dropdown-menu>
+                        <ul class="dropdown menu" data-dropdown-menu>
                             <li class="">
                                 <a href="">{[{selectedLang}]}</a>
                                 <ul class="menu">
@@ -53,7 +54,7 @@
                 <div class="cell shrink">
                     <div class="white-bg main-logo ">
                         <a href=" ">
-                            <img src="assets/img/logo.svg" alt="на головну"></a>
+                            <img src="assets/img/{[{lngData.logo}]}" alt="на головну"></a>
                     </div>
                 </div>
                 <div class="cell auto text-right ">
@@ -69,7 +70,7 @@
                     </div>
                 </div>
             </div>
-        </div>    <div ng-view></div><br><br><br>
+        </header>    <div ng-view class="fade"></div><br><br><br>
         <footer>
             <div class="light-bg" style="border-radius: 0"><br>
                 <div class="grid-x grid-padding-x">
@@ -77,9 +78,9 @@
                         <div id="google-map" style="width:100%;height:400px; "></div><br>
                     </div>
                     <div class="cell medium-5 large-3">
-                        <p class="pre">{[{data.address}]}</p>
-                        рецепція: <a class="tel" href="tel://{[{data.tel}]}">{[{data.telView}]}</a>
-                        <br><span class="gold small">{[{data.disclaim}]}</span>
+                        <p class="pre">{[{lngData.address}]}</p>
+                        {[{lngData.reception}]}: <a class="tel" href="tel://{[{data.tel}]}">{[{data.telView}]}</a>
+                        <br><span class="gold small">{[{lngData.disclaim}]}</span>
                         <p>{[{data.email}]}</p>
                         <div class="orn-3"></div>
                         <div class="social-icons ">
@@ -116,12 +117,12 @@
         }
         google.maps.event.addDomListener(window, 'load', initialize);
         </script></div>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
     <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
-    <script src="assets/js_plugins/angular-animate.js"></script>
+    <!-- <script src="assets/js_plugins/angular-animate.js"></script> -->
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

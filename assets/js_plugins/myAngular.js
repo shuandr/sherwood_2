@@ -1,4 +1,4 @@
-var app = angular.module('shrwd', ['ngRoute', 'ngLocale', 'ngSanitize', 'slickCarousel']);
+var app = angular.module('shrwd', ['ngRoute', 'ngLocale', 'ngSanitize', 'ngAnimate', 'slickCarousel']);
 
 
 
@@ -40,12 +40,13 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
 
     $scope.langs = ["UA", "EN"];
     $scope.selectedLang = "UA";
+    $scope.lngData = {};
     $scope.data = {};
     $scope.dataLoaded = true;
 
     $scope.changeLang = function(lang) {
         if (lang == "UA") {
-            $scope.data = $scope.dataUA;
+            $scope.lngData = $scope.dataUA;
             $scope.selectedLang = "UA";
             $scope.book = $scope.dataUA.booking;
 
@@ -55,9 +56,9 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
             }, 20);
 
         } else {
-            $scope.data = $scope.dataEN;
+            $scope.lngData = $scope.dataEN;
             $scope.selectedLang = "EN";
-                        $scope.book = $scope.dataEN.booking;
+            $scope.book = $scope.dataEN.booking;
 
             $scope.dataLoaded = false;
             $timeout(function() {
@@ -67,20 +68,25 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
         }
     };
 
-    $http.get("assets/data/data.json").then(function(response) {
+    $http.get("assets/data/common.json").then(function(response) {
+        $scope.data = response.data;
+
+    });
+    $http.get("assets/data/UA.json").then(function(response) {
         $scope.dataUA = response.data;
-        $scope.book = $scope.dataUA.booking;
         if ($scope.selectedLang == "UA") {
-            $scope.data = $scope.dataUA;
+            $scope.lngData = $scope.dataUA;
         }
     });
 
-    $http.get("assets/data/data_EN.json").then(function(response) {
+    $http.get("assets/data/EN.json").then(function(response) {
         $scope.dataEN = response.data;
         if ($scope.selectedLang == "EN") {
-            $scope.data = $scope.dataEN;
+            $scope.lngData = $scope.dataEN;
+
         }
     });
+
 
     $http.get("assets/data/menu.json").then(function(response) {
         $scope.sherMenu = response.data;
@@ -123,7 +129,7 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
         fade: true,
     };
 
- // FORM-SUBMISSION-HANDLER
+    // FORM-SUBMISSION-HANDLER
 
     // get all data in form and return object
     function getFormData() {

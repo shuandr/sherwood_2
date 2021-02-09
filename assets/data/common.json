@@ -1,0 +1,74 @@
+{
+    "tel": "+380323438097",
+    "telView": "+38 03234-38-097",
+    "email": "sherwood.lviv@gmail.com",
+    "fb": "sherwood.hotel.resort",
+    "insta": "sherwood_hotel_resort",
+    "main":
+    {
+        "intro": [
+            "kolyba_coast.webp",
+            "coast.webp",
+            "altanky_2.webp",
+            "coast_2.webp",
+            "boat.webp",
+            "coast_4.webp",
+            "cup-leaves.webp"
+        ],
+        "hotel": [
+            "lux_5.webp",
+            "semi-lux_3.webp",
+            "room.webp",
+            "standart-room-2-3.webp",
+            "wooden_house-1.webp",
+            "standart-room-2-2.webp",
+            "standart-room-1-1.webp"
+        ],
+        "resto": [
+            "table-2.webp",
+            "kolyba_2.webp",
+            "hall_1.webp",
+            "kolyba_1.webp",
+            "table.webp",
+            "kolyba_3.webp"
+        ]
+    },
+    "hotel": [
+        "hotel_2a.webp",
+        "billyard.webp",
+        "spa_1.webp",
+        "table_3.webp",
+        "photo_2.webp"
+    ],
+    "hall":
+    {
+        "topSlider": [
+            "hall_2.webp",
+            "wedding.webp",
+            "hall_3.webp",
+            "conference_hall_1.webp",
+            "table.webp"
+        ],
+        "banquette": [
+            "hall_1.webp",
+            "fourchette.webp",
+            "hall_2.webp",
+            "fourchette_2.webp",
+            "hall_4.webp",
+            "fourchette_3.webp",
+            "hall_5.webp"
+        ],
+        "conf": [
+            "conference_hall_1.webp",
+            "conference_hall_2.webp",
+            "conference_hall_3.webp",
+            "conference_hall_4.webp"
+        ]
+    },
+    "menu": [
+        "wine_fire.webp",
+        "desert_1.webp",
+        "dishes_1.webp",
+        "table.webp"
+    ]
+}

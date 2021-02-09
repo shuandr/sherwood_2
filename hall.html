@@ -27,29 +27,29 @@
     <div class="grid-container">
         <div class="main-bg rounded" style="padding: 1rem"><br>
                     <!-- INTRO -->
-            <h1 class="uppercase gold text-center">{[{data.hall.intro.h}]}</h1>
-            <h5 class=" pre dark-gold text-center">{[{data.hall.intro.p}]}</h5>
+            <h1 class="uppercase gold text-center">{[{lngData.hall.intro.h}]}</h1>
+            <h5 class=" pre dark-gold text-center">{[{lngData.hall.intro.p}]}</h5>
             <div class="orn"></div>
             <div class="grid-x grid-padding-x align-center">
                 <div class="cell medium-11 large-10 text-center">
                     <!-- banquette -->
-                    <h2 class="uppercase light-gold  ">{[{data.hall.banquette.h}]}</h2>
-                    <p class="pre">{[{data.hall.banquette.p}]}</p>
+                    <h2 class="uppercase light-gold  ">{[{lngData.hall.banquette.h}]}</h2>
+                    <p class="pre">{[{lngData.hall.banquette.p}]}</p>
                     <slick settings="smallSlickConfig">
-                        <img ng-repeat="slide in data.hall.banquette.img" src="assets/img/{[{slide}]}" alt="">
+                        <img ng-repeat="slide in data.hall.banquette" src="assets/img/{[{slide}]}" alt="">
                     </slick>
                     <div class="orn"></div>
                     <!-- END -->
                     <!-- conf -->
                     <div id="conf"></div>
-                    <h2 class="uppercase light-gold  ">{[{data.hall.conf.h}]}</h2>
-                    <p class="pre">{[{data.hall.conf.p}]}</p>
+                    <h2 class="uppercase light-gold  ">{[{lngData.hall.conf.h}]}</h2>
+                    <p class="pre">{[{lngData.hall.conf.p}]}</p>
                     <ul class="text-left">
-                        <li ng-repeat="room in data.hall.conf.list">{[{room}]}</li>
+                        <li ng-repeat="room in lngData.hall.conf.list">{[{room}]}</li>
                     </ul>
                    
                     <slick settings="smallSlickConfig">
-                        <img ng-repeat="slide in data.hall.conf.img" src="assets/img/{[{slide}]}" alt="">
+                        <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
                     </slick>
                     <div class="orn"></div>
                     <!-- END -->
@@ -58,13 +58,14 @@
             </div><br>
         </div><br><br>
             <div class="text-center">
-                <a href="{[{data.hall.bHref}]}" class="large button uppercase"><i class="fas fa-phone "></i> {[{data.hall.btn}]}</a>
+                <a href="{[{lngData.hall.bHref}]}" class="large button uppercase"><i class="fas fa-phone "></i> {[{lngData.hall.btn}]}</a>
             </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
     <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
-    <script src="assets/js_plugins/angular-animate.js"></script>
+    <!-- <script src="assets/js_plugins/angular-animate.js"></script> -->
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

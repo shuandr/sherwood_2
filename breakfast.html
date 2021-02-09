@@ -19,7 +19,7 @@
 
 <body>
     <slick settings="mainSlickConfig" >
-        <div ng-repeat="slide in data.menuSlider">
+        <div ng-repeat="slide in data.menu">
             <div class="menu-slide" style="background-image: url(assets/img/{[{slide}]})">
             </div>
         </div>
@@ -27,7 +27,7 @@
     <div class="grid-container">
         <div class="grid-x grid-padding-x align-center main-bg rounded">
             <div class="cell medium-11 large-10 align-self-center"><br>
-                <h1 class="uppercase gold text-center">сніданки</h1>
+                <h1 class="uppercase gold text-center">{[{lngData.menu.brkfs}]}</h1>
                 <table>
                     <tr ng-repeat="dish in brkfst">
                         <td class="dish-name">{[{dish.name}]}<br><span class="dish-descr">{[{dish.descr}]}</span></td>
@@ -44,19 +44,20 @@
                         </tr>
                     </table>
                 </div>
-                <div class="text-center"><a href="#!/menu" class="hollow button uppercase">основне меню</a> &nbsp; &nbsp;<a href="#!/alco-menu" class="hollow button uppercase">бар і винна мапа</a>
+                <div class="text-center"><a href="#!/menu" class="hollow button uppercase">{[{lngData.menu.mainMenu}]}</a> &nbsp; &nbsp;<a href="#!/alco-menu" class="hollow button uppercase">{[{lngData.menu.alco}]}</a>
                 </div>
             </div>
         </div><br><br>  
         <div class="text-center">
-            <a href="tel://{[{data.tel}]}" class="large button uppercase"><i class="fas fa-phone "></i> замовити столик</a>
+            <a href="tel://{[{data.tel}]}" class="large button uppercase"><i class="fas fa-phone "></i> {[{lngData.menu.bookTbl}]}</a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
     <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
-    <script src="assets/js_plugins/angular-animate.js"></script>
+    <!-- <script src="assets/js_plugins/angular-animate.js"></script> -->
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
