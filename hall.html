@@ -8,7 +8,7 @@
     <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
     <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
     <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
-    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.webp">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://sherwood-resort.com/" />
     <link rel="stylesheet" href="assets/css/app.css">
@@ -25,41 +25,43 @@
         </div>
     </slick>
     <div class="grid-container">
-        <div class="main-bg rounded" style="padding: 1rem"><br>
-                    <!-- INTRO -->
-            <h1 class="uppercase gold text-center">{[{lngData.hall.intro.h}]}</h1>
-            <h5 class=" pre dark-gold text-center">{[{lngData.hall.intro.p}]}</h5>
-            <div class="orn"></div>
-            <div class="grid-x grid-padding-x align-center">
-                <div class="cell medium-11 large-10 text-center">
-                    <!-- banquette -->
-                    <h2 class="uppercase light-gold  ">{[{lngData.hall.banquette.h}]}</h2>
-                    <p class="pre">{[{lngData.hall.banquette.p}]}</p>
-                    <slick settings="smallSlickConfig">
-                        <img ng-repeat="slide in data.hall.banquette" src="assets/img/{[{slide}]}" alt="">
-                    </slick>
-                    <div class="orn"></div>
-                    <!-- END -->
-                    <!-- conf -->
-                    <div id="conf"></div>
-                    <h2 class="uppercase light-gold  ">{[{lngData.hall.conf.h}]}</h2>
-                    <p class="pre">{[{lngData.hall.conf.p}]}</p>
-                    <ul class="text-left">
-                        <li ng-repeat="room in lngData.hall.conf.list">{[{room}]}</li>
-                    </ul>
-                   
-                    <slick settings="smallSlickConfig">
-                        <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
-                    </slick>
-                    <div class="orn"></div>
-                    <!-- END -->
-                </div>
+        <div class="grid-x grid-padding-x align-center main-bg">
+            <div class="cell medium-11 large-10 text-center">
+                <!-- INTRO -->
+                <br>
+                <h1 class="uppercase gold text-center">{[{lngData.hall.intro.h}]}</h1>
+                <h5 class=" pre dark-gold text-center">{[{lngData.hall.intro.p}]}</h5>
                 <div class="orn"></div>
-            </div><br>
-        </div><br><br>
-            <div class="text-center">
-                <a href="{[{lngData.hall.bHref}]}" class="large button uppercase"><i class="fas fa-phone "></i> {[{lngData.hall.btn}]}</a>
+                <!-- banquette -->
+                <h2 class="uppercase light-gold  ">{[{lngData.hall.banquette.h}]}</h2>
+                <p class="pre">{[{lngData.hall.banquette.p}]}</p>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.hall.banquette" src="assets/img/{[{slide}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                <!-- END -->
+                <!-- conf -->
+                <div id="conf"></div>
+                <h2 class="uppercase light-gold  ">{[{lngData.hall.bigConf.h}]}</h2>
+                <p class="pre">{[{lngData.hall.bigConf.p}]}</p>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                 <h2 class="uppercase light-gold  ">{[{lngData.hall.smConf.h}]}</h2>
+                <p class="pre">{[{lngData.hall.smConf.p}]}</p>
+                <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                <!-- END -->
             </div>
+            <div class="orn"></div>
+            <br>
+        </div><br><br>
+        <div class="text-center">
+            <a href="#!/booking" ng-click="setBookType('hall')" class="large button uppercase"><i class="fas fa-phone "></i> {[{lngData.hall.btn}]}</a>
+        </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>

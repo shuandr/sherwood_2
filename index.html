@@ -8,7 +8,7 @@
     <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
     <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
     <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
-    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.webp">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://sherwood-resort.com/" />
     <link rel="stylesheet" href="assets/css/app.css">
@@ -18,29 +18,33 @@
 </head>
 
 <body>
-    
-    <div ng-app="shrwd" ng-controller="shrwdCtrl">
         <div class="shrwd-bg-full"></div>
         <div id="preloader" class="grid-x shrwd-bg align-center-middle">
-        <div class="cell" id="pre-logo">
-            <img src="assets/img/logo.svg" alt="">
+            <div class="cell" id="pre-logo">
+                <img src="assets/img/logo.svg" alt="">
+            </div>
         </div>
-    </div>
+    <div ng-app="shrwd" ng-controller="shrwdCtrl">
         <header >
+            <!-- <div class="hdr-bgrd"></div> -->
             <div class="grid-x">
                 <div class="cell auto uppercase">
                     <div class="nav-menu-wrapper">
+                       
                         <ul class="dropdown menu" data-dropdown-menu>
                             <li>
                                 <a href=""><i class="fas fa-bars fa-2x"></i></a>
                                 <ul class="menu nav-menu">
-                                    <li ng-repeat="item in lngData.mainMenu"><a href="{[{item.a}]}">{[{item.h}]}</a></li>
+                                    <div class="show-for-small-only">   
+                                    <li class="" style="display: contents;" ng-repeat="lang in langs"><a style="display: inline-block;" href="" ng-click="changeLang(lang)">{[{lang}]}</a></li><hr>
+                                     </div>
+                                    <li ng-repeat="item in lngData.mainMenu"><a  href="{[{item.a}]}">{[{item.h}]}</a></li>
                                     <li>&nbsp;</li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <div class="lang-select text-center">
+                    <div class="lang-select text-center show-for-medium">
                         <ul class="dropdown menu" data-dropdown-menu>
                             <li class="">
                                 <a href="">{[{selectedLang}]}</a>

@@ -8,7 +8,7 @@
     <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
     <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
     <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
-    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.webp">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://sherwood-resort.com/" />
     <link rel="stylesheet" href="assets/css/app.css">
@@ -26,7 +26,7 @@
                         <a href="{[{slide.href}]}">
                             <h1 class="uppercase white text-center">{[{slide.text}]}</h1><br>
                         </a>
-                        <a href="{[{slide.bHref}]}">
+                        <a href="#!/booking" ng-click="setBookType(slide.bookType)">
                             <button class="large button uppercase white-bg dark">{[{slide.button}]}</button>
                         </a>
                     </div>
@@ -35,8 +35,8 @@
         </div>
     </slick>
     <div class="grid-container">
-        <div class="grid-x grid-padding-x align-center main-bg rounded">
-            <div class="cell medium-11 large-10 align-self-center text-center">
+        <div class="grid-x grid-padding-x align-center main-bg">
+            <div class="cell medium-11 large-10 text-center">
                 <br>
                 <!-- INTRO -->
                 <h2 class="uppercase light-gold  ">{[{lngData.main.intro.h}]}</h2>
@@ -54,7 +54,7 @@
                 </ul>
                 <p class="pre">{[{lngData.main.hotel.p2}]}</p>
                 <a href="#!/hotel" class="hollow button uppercase">
-                {[{lngData.main.hotel.moreBtn}]}</a>
+                    {[{lngData.main.hotel.moreBtn}]}</a>
                 <slick settings="smallSlickConfig">
                     <img ng-repeat="slide in data.main.hotel" src="assets/img/{[{slide}]}" alt="">
                 </slick>
@@ -65,15 +65,25 @@
                 <p class="pre">{[{lngData.main.resto.p}]}</p>
                 <a href="#!/menu" class="hollow button uppercase">{[{lngData.main.resto.menuBtn}]}</a>&nbsp;&nbsp;&nbsp;
                 <a href="#!/alco-menu" class="hollow button uppercase">
-                {[{lngData.main.resto.alcoBtn}]}</a>
+                    {[{lngData.main.resto.alcoBtn}]}</a>
                 <slick settings="smallSlickConfig">
                     <img ng-repeat="food in data.resto.img" src="assets/img/{[{food}]}" alt="">
                 </slick>
                 <div class="orn"></div><br>
                 <!-- END -->
             </div>
+        </div><br><br>
+    
+    <!-- CERT -->
+    <div class="grid-x grid-padding-x align-middle">
+        <div class="cell medium-7 large-8">
+            <h3 class="gold  text-right">{[{lngData.main.cert}]}</h3><br>
         </div>
-    </div><br><br><br>
+        <div class="cell medium-5 large-4">
+            <img src="assets/img/cert.webp" alt="">
+        </div>
+    </div>
+    </div><br><br>
     <!-- ACTIVITIES -->
     <div class="alt-bg"><br>
         <div class="orn-2"></div>
@@ -82,7 +92,7 @@
                 <img src="assets/img/{[{act.img}]}" alt="{[{act.h}]}">
                 <div class="act-overlay"></div>
                 <h3 class="uppercase light-gold ">{[{act.h}]}</h3>
-                <div class="act-text text-center">{[{act.p}]}</div>
+                <div class="pre act-text text-center">{[{act.p}]}</div>
             </div>
         </div>
         <div class="orn-2"></div><br>

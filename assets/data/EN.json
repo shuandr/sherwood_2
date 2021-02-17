@@ -44,21 +44,21 @@
                 "img": "hotel.webp",
                 "href": "#!/hotel",
                 "button": "book",
-                "bHref": "#!/booking"
+                "bookType": "hotel"
             },
             {
                 "text": "banquette hall",
                 "img": "hall_2.webp",
                 "href": "#!/hall",
                 "button": "book",
-                "bHref": "tel://+380323438097"
+                "bookType": "hall"
             },
             {
-                "text": "photosessions",
+                "text": "wedding photosessions",
                 "img": "photo_1.webp",
                 "href": " ",
                 "button": "book",
-                "bHref": "tel://+380323438097"
+                "bookType": "photo"
             }
 
         ],
@@ -91,6 +91,7 @@
             "menuBtn": "menu",
             "alcoBtn": "wine map"
         },
+        "cert": "Обов'язково вказую про можливість придбати подарунковий сертифікат",
         "activities": [
         {
             "h": "spa",
@@ -100,7 +101,7 @@
         },
         {
             "h": "billiards",
-            "p": "We invite you to play Russian pyramid or pool. Our billiard rooms provide an attractive mixture of cue games, cosy setting, cheerful retreat, relaxing atmosphere and affordable prices. In our hotel you may participate in billiard tournaments and even win a valuable prize or simply watch professionals playing together with your friends.",
+            "p": "Our billiard rooms provide an attractive mixture of cue games, cosy setting, cheerful retreat, relaxing atmosphere and affordable prices. In our hotel you may participate in billiard tournaments and even win a valuable prize or simply watch professionals playing together with your friends.",
             "img": "billyard.webp"
 
         },
@@ -117,9 +118,9 @@
 
         },
         {
-            "h": "fishing",
-            "p": " ",
-            "img": "carpio_1.webp"
+            "h": "Horse riding",
+            "p": "Both experienced riders and newbies can try various short and long horse riding trips. Kids may ride ponies.\nRiding cost – 200 UAH/hour\nWith instructor – 50 UAH/500 m\npony with instructor – 50 UAH/lap",
+            "img": "horse_riding_2.webp"
 
         },
         {
@@ -181,8 +182,8 @@
             ]
         },
         {
-            "h": "double rooms",
-            "p": "Double room is the best choice for work and rest. In our STANDARD double rooms there either twin beds or a king-size bed, while in the SUPERIOR double rooms a third person may also sleep on an additional bed.\nThe double room also has:",
+            "h": "triple rooms",
+            "p": "Triple room is the best choice for work and rest. In our STANDARD double rooms there either twin beds or a king-size bed, while in the SUPERIOR double rooms a third person may also sleep on an additional bed.\nThe double room also has:",
             "list": [
                 "Desk",
                 "Large plasma TV with cable channels",
@@ -202,18 +203,22 @@
         {
             "cellOrder": "large-order-1",
             "cellOrder2": "large-order-2",
-            "h": "single rooms",
-            "p": "Light and comfortable one-room accommodation (14 m2) with a single bed.\nThe single room also has:",
+            "h": "double rooms",
+            "p": "Double room is the best choice for work and rest. In our STANDARD double rooms there either twin beds or a king-size bed, while in the SUPERIOR double rooms a third person may also sleep on an additional bed.\nThe double room also has:",
             "list": [
                 "Desk",
+                "Large plasma TV with cable channels",
                 "Free broadband Internet",
-                "Bathroom with a bathtub and body-care products",
                 "Bathrobe and towels"
+
             ],
-            "price": "Price: 540 UAH",
+            "price": "Price: 990 UAH",
             "img": [
-                "standart-room-1-1.webp",
-                "standart-room-1-2.webp"
+                "standart-room-2-1.webp",
+                "standart-room-2-2.webp",
+                "standart-room-2-3.webp",
+                "standart-room-2-4.webp",
+                "standart-room-2-5.webp"
             ]
         },
         {
@@ -250,20 +255,39 @@
             "p": "we offer you something very very exclusive"
 
         },
-        "conf":
+        "bigConf":
         {
-            "h": "conference hall",
+            "h": "big conference hall",
             "p": " Various business events can take place in our conference room that can seat up to 30 persons.\nConference room of Sherwood hotel is a perfect place for such events as press conferences, presentations, round tables and business training workshops. Special conference furniture has several layout variants to fit best your audience’s needs.\nPrice: 300 UAH/hour, 2000 UAH/day"
 
         },
-        "btn": "book",
-        "bHref": "tel://+380323438097"
+        "smConf":
+        {
+            "h": "small conference hall",
+            "p": " Various business events can take place in our conference room that can seat up to 30 persons.\nConference room of Sherwood hotel is a perfect place for such events as press conferences, presentations, round tables and business training workshops. Special conference furniture has several layout variants to fit best your audience’s needs.\nPrice: 300 UAH/hour, 2000 UAH/day"
+
+        },
+        "btn": "book"
+        
 
     },
 
     "booking":
     {
         "title": "booking request",
+        "bookTypes": [
+        {
+            "name": "hotel",
+            "bookType": "hotel"
+        },
+        {
+            "name": "banquette hall",
+            "bookType": "hall"
+        },
+        {
+            "name": "photoshoot",
+            "bookType": "photo"
+        }],
         "name": "your name *",
         "tel": "phone number",
         "errEmail": "invalid e-mail",
@@ -274,6 +298,14 @@
         "roomOpt": ["suite", "semi-suite", "triple", "double", "single"],
         "adults": "adults",
         "children": "children",
+
+        "eventdate": "event date",
+        "eventType": "event type",
+        "events": ["весілля", "день народження", "дитяче свято", "бенкет", "корпоратив"],
+        "persons": "quantity",
+
+        "photodate": "date",
+        "phototime": "time",
         "comment": "your suggestions:",
         "submit": "send",
         "thnxMsg": "Thank you!",

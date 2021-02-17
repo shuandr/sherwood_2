@@ -43,6 +43,7 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
     $scope.lngData = {};
     $scope.data = {};
     $scope.dataLoaded = true;
+    $scope.bookType = "hotel";
 
     $scope.changeLang = function(lang) {
         if (lang == "UA") {
@@ -68,6 +69,10 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
         }
     };
 
+    $scope.setBookType = function(bookType) {
+        $scope.bookType = bookType;
+    };
+
     $http.get("assets/data/common.json").then(function(response) {
         $scope.data = response.data;
 
@@ -76,6 +81,8 @@ app.controller('shrwdCtrl', function($scope, $http, $timeout) {
         $scope.dataUA = response.data;
         if ($scope.selectedLang == "UA") {
             $scope.lngData = $scope.dataUA;
+            $scope.book = $scope.dataUA.booking;
+
         }
     });
 

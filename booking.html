@@ -8,7 +8,7 @@
     <title>ШЕРВУД | Готельно-відпочинковий комплекс</title>
     <meta property="og:title" content="ШЕРВУД — Готельно-відпочинковий комплекс поблизу Львова" />
     <meta property="og:description" content="Готель, озеро, колиба, альтанки, коні та форель за 35 км від Львова, дорогою на Шегині" />
-    <meta property="og:image" content="http://sherwood-resort.com/og_image.jpg">
+    <meta property="og:image" content="http://sherwood-resort.com/og_image.webp">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://sherwood-resort.com/" />
     <link rel="stylesheet" href="assets/css/app.css">
@@ -20,10 +20,14 @@
 <body>
     <br><br><br>
     <div class="grid-container">
-        <div class="grid-x grid-padding-x align-middle" style="min-height: 100vh">
-            <div class="cell main-bg rounded"><br>
-                <h3 class="uppercase gold text-center">{[{book.title}]}</h3><br>
-                <form ng-submit="formSubmit()" id="gform" >
+        <div class="grid-x grid-padding-x align-middle" style="min-height: 84vh; margin-top:8vh ">
+            <div class="cell main-bg "><br>
+                <div class="text-center">
+                    <a ng-repeat="type in book.bookTypes" ng-click="setBookType(type.bookType)" class="hollow button uppercase" style="margin: 0.4rem">{[{type.name}]}</a>
+                </div>
+                <h3 class="uppercase gold text-center">{[{book.title}]}: {[{bookType}]}</h3>
+                <br>
+                <form ng-submit="formSubmit()" id="gform">
                     <div class="grid-x grid-padding-x">
                         <div class="large-4 medium-6 cell">
                             <input type="text" id="name" name="ім’я" placeholder="{[{book.name}]}" required>
@@ -34,7 +38,7 @@
                             <input type="tel" id="phone" name="телефон" ng-model="phone" angular-mask="(000) 000-00-00" placeholder="000 000-00-00">
                             {[{book.required}]}<br>
                         </div>
-                        <div class="large-4 medium-6 cell">
+                        <div ng-if="bookType=='hotel'" class="large-4 medium-6 cell">
                             <div class="grid-x grid-padding-x">
                                 <div class="small-6 cell">
                                     <label for="arrive">{[{book.arrive}]}:</label>
@@ -64,6 +68,35 @@
                                 </div>
                             </div>
                         </div>
+                        <div ng-if="bookType=='hall'" class="large-4 medium-6 cell">
+                            <div class="grid-x grid-padding-x">
+                                <div class="small-6 cell">
+                                    <label for="eventdate">{[{book.eventdate}]}:*</label>
+                                    <input type="date" id="eventdate" name="дата заходу" required>
+                                </div>
+                                <div class="small-6 cell">
+                                    <label for="persons">{[{book.persons}]}:</label>
+                                    <input type="number" max="150" id="persons" name="кількість осіб" required>
+                                </div>
+                            </div>
+                            <label for="event">{[{book.eventType}]}:</label>
+                            <select id="event" name="подія">
+                                <option ng-repeat="opt in book.events" value="{[{opt}]}">{[{opt}]}</option>
+                            </select>
+                        </div>
+                        <div ng-if="bookType=='photo'" class="large-4 medium-6 cell">
+                            <div class="grid-x grid-padding-x">
+                                <div class="small-6 cell">
+                                    <label for="photodate">{[{book.photodate}]}:*</label>
+                                    <input type="date" id="photodate" name="дата фото" required>
+                                </div>
+                                <div class="small-6 cell">
+                                    <label for="phototime">{[{book.phototime}]}:</label>
+                                    <input type="time" max="22:00" value="08:00" step="10" id="phototime" name="час фото" >
+                                </div>
+                            </div>
+                        
+                        </div>
                         <div class="large-4 cell">
                             <textarea id="message" name="побажання" rows="5" placeholder="{[{book.comment}]}"></textarea>
                         </div>
@@ -79,7 +112,6 @@
             </div>
         </div>
     </div>
-     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
