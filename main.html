@@ -67,7 +67,15 @@
                 <a href="#!/alco-menu" class="hollow button uppercase">
                     {[{lngData.main.resto.alcoBtn}]}</a>
                 <slick settings="smallSlickConfig">
-                    <img ng-repeat="food in data.resto.img" src="assets/img/{[{food}]}" alt="">
+                    <img ng-repeat="food in data.main.resto" src="assets/img/{[{food}]}" alt="">
+                </slick>
+                <div class="orn"></div>
+                <!-- END -->
+            <!-- RESTO -->
+                <h2 class="uppercase light-gold  ">{[{lngData.main.conf.h}]}</h2>
+                <p class="pre">{[{lngData.main.conf.p}]}</p>
+                            <slick settings="smallSlickConfig">
+                    <img ng-repeat="slide in data.main.conf" src="assets/img/{[{slide}]}" alt="">
                 </slick>
                 <div class="orn"></div><br>
                 <!-- END -->
@@ -110,7 +118,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
     <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
-    <!-- <script src="assets/js_plugins/angular-animate.js"></script> -->
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

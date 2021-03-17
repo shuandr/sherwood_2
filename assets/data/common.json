@@ -31,6 +31,13 @@
             "kolyba_1.webp",
             "table.webp",
             "kolyba_3.webp"
+        ],
+        "conf": [
+            "conf_1.webp",
+            "conference_hall_1.webp",
+            "conf_2.webp",
+            "conference_hall_2.webp",
+            "conference_hall_3.webp"
         ]
     },
     "hotel": [
@@ -57,6 +64,12 @@
             "hall_4.webp",
             "fourchette_3.webp",
             "hall_5.webp"
+        ],
+        "bigConf": [
+            "conf_1.webp",
+            "conf_2.webp",
+            "conf_3.webp",
+            "conf_4.webp"
         ],
         "conf": [
             "conference_hall_1.webp",

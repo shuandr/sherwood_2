@@ -41,7 +41,7 @@
         "topSlider": [
             {
                 "text": "hotel & resort",
-                "img": "hotel.webp",
+                "img": "hotel_2.webp",
                 "href": "#!/hotel",
                 "button": "book",
                 "bookType": "hotel"
@@ -91,7 +91,7 @@
             "menuBtn": "menu",
             "alcoBtn": "wine map"
         },
-        "cert": "Обов'язково вказую про можливість придбати подарунковий сертифікат",
+        "cert": "У вас завжди є можливість придбати подарунковий сертифікат",
         "activities": [
         {
             "h": "spa",
@@ -214,7 +214,9 @@
             ],
             "price": "Price: 990 UAH",
             "img": [
+                "room-2_1.webp",
                 "standart-room-2-1.webp",
+                "room-2_2.webp", 
                 "standart-room-2-2.webp",
                 "standart-room-2-3.webp",
                 "standart-room-2-4.webp",
@@ -268,7 +270,7 @@
 
         },
         "btn": "book"
-        
+
 
     },
 
@@ -295,7 +297,7 @@
         "arrive": "arrival *",
         "depart": "departure",
         "room": "choose room type",
-        "roomOpt": ["suite", "semi-suite", "triple", "double", "single"],
+        "roomOpt": ["suite", "semi-suite", "triple", "double"],
         "adults": "adults",
         "children": "children",
 

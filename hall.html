@@ -42,13 +42,13 @@
                 <!-- END -->
                 <!-- conf -->
                 <div id="conf"></div>
-                <h2 class="uppercase light-gold  ">{[{lngData.hall.bigConf.h}]}</h2>
+                <h3 class="uppercase light-gold  ">{[{lngData.hall.bigConf.h}]}</h3>
                 <p class="pre">{[{lngData.hall.bigConf.p}]}</p>
                 <slick settings="smallSlickConfig">
-                    <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
+                    <img ng-repeat="slide in data.hall.bigConf" src="assets/img/{[{slide}]}" alt="">
                 </slick>
                 <div class="orn"></div>
-                 <h2 class="uppercase light-gold  ">{[{lngData.hall.smConf.h}]}</h2>
+                 <h3 class="uppercase light-gold  ">{[{lngData.hall.smConf.h}]}</h3>
                 <p class="pre">{[{lngData.hall.smConf.p}]}</p>
                 <slick settings="smallSlickConfig">
                     <img ng-repeat="slide in data.hall.conf" src="assets/img/{[{slide}]}" alt="">
@@ -67,7 +67,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-route.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
     <script src="assets/js_plugins/angular-locale_uk-ua.js"></script>
-    <!-- <script src="assets/js_plugins/angular-animate.js"></script> -->
     <script src="assets/js_plugins/myAngular.js"></script>
     <script src="assets/js/app.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
