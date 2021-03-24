@@ -55,7 +55,7 @@
             },
             {
                 "text": "wedding photosessions",
-                "img": "photo_1.webp",
+                "img": "wedding_2.webp",
                 "href": " ",
                 "button": "book",
                 "bookType": "photo"
@@ -88,7 +88,7 @@
         {
             "h": "конференц–сервіс",
             "p": "У нашому відпочинковому комплексі є зручні умови для проведення конференцій, презентацій, майстер-класів та семінарів. Два просторі зали у яких комфортно можна розмістити 30 та 100 осіб відповідно. Малий конференц–зал обладнаний індивідуальними робочими місцями, проектором, кондиціонером. Є фліп-чарт та канцелярське приладдя.\nВеликий зал оснащений системою озвучки, є два мікрофони, проектор та великий екран розміром 4,2×2,4 метри, системою вентилювання приміщення. Сучасні меблі дають змогу робити як конференції з індивідуальним розміщенням так і за одним столом.\nТакож можна замовити кави перерви та комплексне харчування для учасників заходу."
-            
+
 
         },
         "resto":
@@ -136,7 +136,7 @@
             "img": "altanky_1.webp"
 
         },
-         {
+        {
             "h": "лазанка",
             "p": "тут треба шось написать про лазанку",
             "img": "territory.webp"
@@ -160,7 +160,7 @@
     "hotel":
     {
         "h": "hotel",
-        "intro": "All prices include breakfast\nexcept wood house\nAll prices do not include tourist tax \n(20.87 UAH for Ukrainian citizens, 125.19 UAH — for foreigners, per night per person)",
+        "intro": "All prices include breakfast, except wood house\n Additional bed for kids — 380 UAH\nAll prices do not include tourist tax \n(20.87 UAH for Ukrainian citizens, 125.19 UAH — for foreigners, per night per person)",
 
         "introBtn": "breakfasts",
 
@@ -171,13 +171,14 @@
             "list": [
                 "Desk",
                 "Large plasma TV with cable channels",
+                "Air conditioning",
                 "Free broadband Internet",
                 "Individual safe",
                 "Mini bar",
                 "Bathroom with a bathtub and body-care products",
                 "Bathrobe and towels"
             ],
-            "price": "Price: 1500 UAH",
+            "price": "Price: 1600 UAH",
             "img": [
                 "lux_5.webp",
                 "lux_4.webp",
@@ -194,14 +195,14 @@
             "list": [
                 "Desk",
                 "Large plasma TV with cable channels",
+                "Air conditioning",
                 "Free broadband Internet",
                 "Bathroom with a bathtub and body-care products",
                 "Bathrobe and towels"
             ],
-            "price": "Price: 1140 UAH",
+            "price": "Price: 1450 UAH",
             "img": [
                 "semi-lux_2.webp",
-                "semi-lux_3.webp",
                 "semi-lux_4.webp",
                 "semi-lux_5.webp"
             ]
@@ -216,13 +217,12 @@
                 "Bathrobe and towels"
 
             ],
-            "price": "Price: 990 UAH",
+            "price": "Price: 1300 UAH",
             "img": [
-                "standart-room-2-1.webp",
-                "standart-room-2-2.webp",
-                "standart-room-2-3.webp",
-                "standart-room-2-4.webp",
-                "standart-room-2-5.webp"
+                "triple_room_1.webp",
+                "triple_room_2.webp",
+                "triple_room_5.webp",
+                "triple_room_6.webp"
             ]
         },
         {
@@ -239,12 +239,12 @@
             ],
             "price": "Price: 990 UAH",
             "img": [
-                "room-2_1.webp",
+                "double_room_1.webp",
+                "double_room_2.webp",
                 "standart-room-2-1.webp",
-                "room-2_2.webp",
                 "standart-room-2-2.webp",
-                "standart-room-2-3.webp",
                 "standart-room-2-4.webp",
+                "standart-room-2-3.webp",
                 "standart-room-2-5.webp"
             ]
         },
@@ -252,7 +252,6 @@
             "h": "wooden house",
             "p": " Evergreen forest, gorgeous picturesque views — all that enchanting beauty you will see through the window of your bedroom. The guests are immersed into serenity of the surrounding nature. This is the best place for people who would like to get away from the fuss of daily routine.\nIn each room:",
             "list": [
-                "24-hour room-service",
                 "Desk",
                 "Large plasma TV with cable channels",
                 "Bathroom with a bathtub and body-care products",
@@ -273,13 +272,13 @@
         "intro":
         {
             "h": "banquettes & conferences",
-            "p": "we offer you something exclusive"
+            "p": " "
         },
 
         "banquette":
         {
             "h": "banquette hall",
-            "p": "we offer you something very very exclusive"
+            "p": "we offer you something very exclusive"
 
         },
         "bigConf":

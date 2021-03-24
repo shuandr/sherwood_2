@@ -7,13 +7,15 @@
     "main":
     {
         "intro": [
-            "kolyba_coast.webp",
+            "pier_kiss.webp",
+            "coast_table.webp",
+            "coast_5.webp",
+            "photo_1.webp",
             "coast.webp",
-            "altanky_2.webp",
             "coast_2.webp",
             "boat.webp",
-            "coast_4.webp",
-            "cup-leaves.webp"
+            "coast_3.webp",
+            "coast_4.webp"
         ],
         "hotel": [
             "lux_5.webp",
@@ -26,10 +28,10 @@
         ],
         "resto": [
             "table-2.webp",
-            "kolyba_2.webp",
-            "hall_1.webp",
-            "kolyba_1.webp",
+            "breakfast_3.webp",
+            "wine.webp",
             "table.webp",
+            "hall_1.webp",
             "kolyba_3.webp"
         ],
         "conf": [
@@ -74,14 +76,14 @@
         "conf": [
             "conference_hall_1.webp",
             "conference_hall_2.webp",
-            "conference_hall_3.webp",
-            "conference_hall_4.webp"
+            "conference_hall_3.webp"
         ]
     },
     "menu": [
-        "wine_fire.webp",
-        "desert_1.webp",
-        "dishes_1.webp",
-        "table.webp"
+        "breakfast_3.webp",
+        "breakfast_1.webp",
+        "table.webp",
+        "breakfast_2.webp",
+        "wine_fire.webp"
     ]
 }
