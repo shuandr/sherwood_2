@@ -79,15 +79,15 @@
                 "9 triple rooms",
                 "12 double rooms",
                 "1 single rooms",
-                "4 double rooms in wooden house"
+                "4 double rooms in wooden house",
             ],
             "p2": " ",
             "moreBtn": "read more"
         },
         "conf":
         {
-            "h": "конференц–сервіс",
-            "p": "У нашому відпочинковому комплексі є зручні умови для проведення конференцій, презентацій, майстер-класів та семінарів. Два просторі зали у яких комфортно можна розмістити 30 та 100 осіб відповідно. Малий конференц–зал обладнаний індивідуальними робочими місцями, проектором, кондиціонером. Є фліп-чарт та канцелярське приладдя.\nВеликий зал оснащений системою озвучки, є два мікрофони, проектор та великий екран розміром 4,2×2,4 метри, системою вентилювання приміщення. Сучасні меблі дають змогу робити як конференції з індивідуальним розміщенням так і за одним столом.\nТакож можна замовити кави перерви та комплексне харчування для учасників заходу."
+            "h": "conference service",
+            "p": " "
 
 
         },
@@ -98,23 +98,29 @@
             "menuBtn": "menu",
             "alcoBtn": "wine map"
         },
-        "cert": "У вас завжди є можливість придбати подарунковий сертифікат",
+        "cert": "Gift certificates \nfor all services \nvalidity period — 6 months",
         "activities": [
         {
-            "h": "лобі-бар",
-            "p": "Ідеальне місце, аби випити кави, поснідати чи провести зустріч. Зручні дивани, простора барна стійка та камін створюють приємну атмосферу.",
+            "h": "Lobby bar",
+            "p": " ",
             "img": "lobby.webp"
 
         },
         {
-            "h": "spa",
-            "p": "Римська та фінська баня, басейн, джакузі, контрасний душ, трав’яні чаї та настої, окрема кімната для відпочинку, кабельне телебачення, безкоштовна стоянка. Вартість — 950 UAH/2 год., лише баня — 680 грн/2 год. До 6 осіб одночасно.",
+            "h": "spa-zone",
+            "p": " ",
             "img": "spa_1.webp"
 
         },
         {
-            "h": "дитяча кімната",
-            "p": "Працює у вихідні дні. Її послугами можна скористатися під час святкування чи відвідування СПА. Для гостей, які у нас проживають, послуги кімнати безкоштовні. Графік роботи уточнюйте на рецепції.",
+            "h": "wood-burning bathroom",
+            "p": " ",
+            "img": "bania.webp"
+
+        },
+        {
+            "h": "Kids room",
+            "p": " ",
             "img": "kids-room.webp"
 
         },
@@ -137,18 +143,27 @@
 
         },
         {
-            "h": "лазанка",
-            "p": "тут треба шось написать про лазанку",
+            "h": "Pope park",
+            "p": " ",
             "img": "territory.webp"
 
         },
         {
             "h": "Horse riding",
-            "p": "Both experienced riders and newbies can try various short and long horse riding trips. Kids may ride ponies.\nRiding cost – 200 UAH/hour\nWith instructor – 50 UAH/500 m\npony with instructor – 50 UAH/lap",
+            "p": "Both experienced riders and newbies can try various short and long horse riding trips.\nRiding cost – 200 UAH/hour\nWith instructor – 50 UAH/500 m",
             "img": "horse_riding_2.webp"
 
-        },
-        {
+        }, {
+            "h": "Pony riding",
+            "p": "Kids may ride ponies with instructor – 70 UAH/lap.",
+            "img": "pony_2.webp"
+
+        }, {
+            "h": "playground",
+            "p": " ",
+            "img": "playground.webp"
+
+        }, {
             "h": "Football",
             "p": "Free for hotel clients ",
             "img": "football.webp"
